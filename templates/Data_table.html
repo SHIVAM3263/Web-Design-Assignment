@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Data_table.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1 class="blue heading">HAPPY 2022, HAPPY FOR KIDS TOO</h1>
+        <p>
+            <a class="btn" href="index.html#stmt">Read the statement</a>
+            <a class="btn" href="joinchain.php">Join the <span class="blue">Chain-for-Children's-Cheer</span></a>
+            <a class="btn" href="resources.html">Resources to Educate &amp; Awaken</a>
+        </p>
+        <h1 class="blue heading2">CHAIN-FOR-CHILDREN'S-CHEER</h2>
+        <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Profession</th>
+                        <th>City/Town</th>
+                        <th>Country</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for data in form_data %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.profession }}</td>
+                            <td>{{ data.city_town }}</td>
+                            <td>{{ data.country }}</td>
+                            <td>{{ data.remarks }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        </table>
+        <p>Click <a class="yellow" href="./">here</a> to go back to the main page.</p>
+    </div>
+    <footer>
+        <div class="contact-info">
+          <p>Contact Us</p>
+          <p>Join Telegram channel: <a>https://t.me/u5india</a></p>
+          <p class="email">Email: <img src="{{ url_for('static', filename='images/happy22kidsemail.png') }}"></p>
+        </div>
+        <p>Template by OS Templates</p>
+    </footer>
+</body>
+</html>

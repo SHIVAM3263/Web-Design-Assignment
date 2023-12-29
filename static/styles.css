@@ -1,0 +1,59 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-data-options{
+display: flex;
+gap: 1rem;
+width: 100%;
+}
+.option{
+    width: 33.3%;
+}
+.option-tag,.email{
+display: flex;
+align-items: center;
+}
+img{
+    width: 16%;
+}
+label{
+    display: block;
+}
+.form-data1{
+    display: flex;
+    gap: 20px;
+}
+.form-data1>div{
+    width: 25%;
+}
+input,select{
+margin-bottom:20px ;
+}
+input[type=text],select{
+    width: 240px;
+    height: 27px;
+}
+.common-form-layout{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.common-form-layout>div{
+    width: 50%;
+}
+.policy{
+    padding-top: 4%;
+}
+button{
+    background: rgb(123, 135, 130);
+    border: 2px solid rgb(22, 23, 23);
+    border-radius: 2px;
+    transition: all 800ms ease;
+    cursor: pointer;
+}
+button:hover{
+background: rgb(182, 173, 173);
+color: rgb(26, 29, 32);
+}

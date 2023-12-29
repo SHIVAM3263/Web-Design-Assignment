@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" >
 </head>
 <body>
     <div class="main">
       <p id="heading">JOIN THE <span class="blue bold">CHAIN-FOR-CHILDREN'S-CHEER</span></p>
       <p>Please read the <span class="yellow">statement</span> before joining.</p>
       <hr>
-      <form >
+      <form method="POST" action="/submit">
         <p>I would like to join the <span class="bold blue">Chain-for-Children's-Cheer</span>, and also encourage others to join and grow the chain.</p>
         <p>I would like to be: *</p>
         <div class="form-data-options">
             <div class="option">
             <label for="activeant">
-              <p class="option-tag">an &nbsp;<span class="bold"> Active Ant</span>&nbsp;<img src="images/ant-small.jpg"></p>
+              <p class="option-tag">an &nbsp;<span class="bold"> Active Ant</span>&nbsp;<img src="{{ url_for('static', filename='images/ant-small.jpg') }}"></p>
               <p> I will at least <span class="blue">Arise and Awaken</span> atleast <span class="bold">2 people </span>to join the chain</p>
             </label>
             <input type="radio" id="activeant" name="volevel" value="activeant" required>
@@ -25,7 +26,7 @@
             </div>
             <div class="option">
               <label for="speedysparrow">
-                  <p class="option-tag">a &nbsp;<span class="bold"> Speedy Sparrow &nbsp;</span> <img src="images/sparrow-small.jpg"></p>
+                  <p class="option-tag">a &nbsp;<span class="bold"> Speedy Sparrow &nbsp;</span> <img src="{{ url_for('static', filename='images/sparrow-small.jpg') }}"></p>
                   <p>I will <span class="blue">Spread the Spirit</span> to at least <span class="bold">5 people </span>to join the chain</p>
               </label>
               <input type="radio" id="speedysparrow" name="volevel" value="speedysparrow" required>
@@ -33,7 +34,7 @@
             </div>
             <div class="option">
               <label for="electricelephant">
-                  <p class="option-tag">an &nbsp;<span class="bold">Electric Elephant &nbsp;</span><img src="images/elephant-small.jpg"></p>
+                  <p class="option-tag">an &nbsp;<span class="bold">Electric Elephant &nbsp;</span><img src="{{ url_for('static', filename='images/elephant-small.jpg') }}"></p>
                   <p> I will at least <span class="blue">Enthuse and Enlighten</span> atleast <span class="bold">20 people</span>to join the chain</p>
               </label>
               <input type="radio" id="electricelephant" name="volevel" value="electricelephant" required>
@@ -47,17 +48,17 @@
           <hr>
           </div>
           <div class=".form-data-items">
-          <label for="name"><p>Profession: <span class="red bold">*</span></p></label>
-          <input type="text" id="name" name="name" maxlength="128" required="">
+          <label for="profession"><p>Profession: <span class="red bold">*</span></p></label>
+          <input type="text" id="profession" name="profession" maxlength="128" required="">
           <hr>
           </div>
           <div class=".form-data-items">
-          <label for="name"><p>Name of City/Town: <span class="red bold">*</span></p></label>
-          <input type="text" id="name" name="name" maxlength="128" required="">
+          <label for="city"><p>Name of City/Town: <span class="red bold">*</span></p></label>
+          <input type="text" id="city" name="city" maxlength="128" required="">
           <hr>
           </div>
           <div class=".form-data-items">
-          <label for="name"><p>Country: <span class="red bold">*</span></p></label>
+          <label for="country"><p>Country: <span class="red bold">*</span></p></label>
           <select id="country" name="country">
             <option value="Afganistan">Afghanistan</option>
             <option value="Albania">Albania</option>
@@ -344,12 +345,13 @@
           </div>
         </div>
       </form>
+    <p>Click <a class="yellow" href="/data_table">here</a> to go to the data page.</p>
     </div>
     <footer>
       <div class="contact-info">
         <p>Contact Us</p>
-        <p>Join Telegram channel: <a>https://t.me/u5india</a></p>
-        <p class="email">Email: <img src="./images/happy22kidsemail.png"></p>
+        <p>Join Telegram channel: <a href="#">https://t.me/u5india</a></p>
+        <p class="email">Email: <img src="{{ url_for('static', filename='images/happy22kidsemail.png') }}"></p>
       </div>
       <p>Template by OS Templates</p>
     </footer>

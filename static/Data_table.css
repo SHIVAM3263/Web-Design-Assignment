@@ -1,0 +1,30 @@
+.heading{
+    font-size: 3rem;
+}
+.heading2{
+    font-size: 2rem;
+}
+.btn{
+    color: #FFFFFF;
+    background-color: #FBAB45;
+    border-color: #FBAB45;
+    padding: 6px;
+}
+Table{
+    background-color: #373737;
+    width: 100%;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 600;
+}
+th,td{
+    padding: 5px 8px;
+    border:2px solid #D7D7D7;
+    text-wrap: wrap;
+}
+@media screen and (width:1400px) {
+    .btn{
+        display: block;
+    }
+}
