@@ -15,11 +15,11 @@ Jinja Template
 
 ## Open the cloned directory in vscode
 
-## Install the following modules
-flask: "pip install flask"
-sqlitte: "pip install flask_sqlalchemy"
-jinja: "pip install Jinja2"
-Type these in your terminal
+## Install the following modules:
+- ### flask: "pip install flask"
+- ### sqlitte: "pip install flask_sqlalchemy"
+- ### jinja: "pip install Jinja2"
+- ### Type these in your terminal
 
 ## Run the app using typing "python app.py" in the teminal or click run button in the app.py in vscode.
 
